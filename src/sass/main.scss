@@ -1,0 +1,50 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+.countries__input {
+  display: block;
+  margin: 0 auto;
+}
+
+.input-title {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.countries {
+  &__item {
+    display: block;
+    margin: 10px auto;
+    width: 1200px;
+    height: 450px;
+    border: solid 2px #000000;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__content-wrapper {
+    font-size: 18px;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.languages__list {
+  margin: 0;
+  padding-left: 40px;
+}
