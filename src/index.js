@@ -1,6 +1,7 @@
 // import fetchCountries from "./js/fetchCountries";
 const _ = require('lodash');
 import './sass/main.scss';
+import './js/theme';
 import countriesTemplate from './templates/countries.hbs';
 import countriesTemplateList from './templates/countries-list.hbs';
 
