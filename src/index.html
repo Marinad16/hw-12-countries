@@ -12,12 +12,23 @@
     />
     <link href="../node_modules/@pnotify/core/dist/BrightTheme.css" rel="stylesheet" type="text/css" />
     <link href="../node_modules/@pnotify/core/dist/PNotify.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <include src="./partials/toolbar.html"></include>
-    <label for="query" class="input-title">Search country:</label>
-    <input type="text" name="query" class="countries__input js-search-input">
-    <ul class="countries list js-countries"></ul>
+    <header class="searchbar container">
+      <img src="" alt="logo" id="logo" width="170" height="52">
+      <div class="search">
+        <label for="query" class="search__label"></label>
+        <input type="text" name="query" class="search__input js-search-input" placeholder="Search country">
+      </div>
+      <include src="./partials/toolbar.html"></include>
+    </header>
+    <section class="country container">
+      <ul class="countries list js-countries"></ul>
+    </section>
+
 
     <script src="./index.js"></script>
   </body>

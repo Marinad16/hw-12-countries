@@ -1,6 +1,8 @@
+
 const refs = {
   switchControl: document.querySelector('#theme-switch-toggle'),
   theme: document.querySelector('body'),
+  logo: document.getElementById('logo'),
 };
 
 const Theme = {
@@ -19,6 +21,7 @@ function checked() {
   refs.theme.classList.add(Theme.DARK);
   localStorage.setItem('theme', Theme.DARK);
   refs.switchControl.checked = true;
+  refs.logo.src = require('../images/white-logo-small.png');
 }
 
 function notChecked() {
@@ -26,6 +29,7 @@ function notChecked() {
   refs.theme.classList.add(Theme.LIGHT);
   localStorage.setItem('theme', Theme.LIGHT);
   refs.switchControl.checked = false;
+  refs.logo.src = require('../images/black-logo-small.png');
 }
 
 function savedTheme() {

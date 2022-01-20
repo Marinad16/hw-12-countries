@@ -24,19 +24,18 @@ const fetchCountries = _.debounce(event => {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data.length);
         if (data.length != undefined) {
           if (data.length == 1) {
             const markup = countriesTemplate(data);
             refs.countriesContainer.insertAdjacentHTML('beforeend', markup);
             return;
           }
-          if (data.length > 1 && data.length <= 10) {
+          if (data.length > 1 && data.length <= 15) {
             const listMarkup = countriesTemplateList(data);
             refs.countriesContainer.insertAdjacentHTML('beforeend', listMarkup);
             return;
           }
-          if (data.length > 10) {
+          if (data.length > 15) {
             alert({
               text: 'Too many matches found. Please enter a more specific query!',
             });
@@ -47,6 +46,7 @@ const fetchCountries = _.debounce(event => {
         return;
       });
   }
+
   refs.countriesContainer.innerHTML = '';
 }, 500);
 
