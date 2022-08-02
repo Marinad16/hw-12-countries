@@ -1,2 +1,4 @@
-Небольшое приложение поиска данных о стране по ее частичному или полному имени. 
-Parcel 
+Project for a country search by its partial or full name. Using
+vanilla JavaScript, SCSS, Handlebars templating, PNotify
+notification plugin, building with Parcel.
+
